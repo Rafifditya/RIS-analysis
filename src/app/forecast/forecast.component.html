@@ -1,0 +1,81 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Forecast Rollover
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">Forecast</li>
+  </ol>
+</section>
+<section class="content">
+
+  <!-- chart -->
+  <div class="row">
+
+    <div class="col-md-12">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Visual chart</h3>
+
+            <div class="box-body">
+                <canvas #chart></canvas>
+              <!-- /.box-body -->
+            </div>
+          <!-- /.box-header with-border -->
+        </div>
+        <!-- /.box -->
+      </div>
+      <!-- /.col -->
+    </div>
+
+
+     <!-- /.row -->
+  </div>
+
+
+  <!-- /.row -->
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Forecast Recap Report</h3>
+
+          <div class="box-body">
+            <div class="table-responsive">
+              <table id="data1" class="table no-margin">
+                <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Prediction</th>
+                  <th>Expectation</th>
+                  <th> Status Forecast(diff between it)</th>
+                </tr>
+                </thead>
+                  <!-- table body-->
+                  <tbody>
+                      <tr *ngFor="let data of realdata">
+                        <td>{{data.date}}</td>
+                        <td>{{data.prediction}} orang</td>
+                        <td>{{data.expectation}} orang</td>
+                        <td *ngIf="data.status == 'Far'" style="color: red;">{{data.status}}</td>
+                        <td *ngIf="data.status == 'Close'" style="color: yellowgreen;">{{data.status}}</td>
+                        <td *ngIf="data.status == 'Nearly'" style="color: green;">{{data.status}}</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+      <!-- /.box -->
+          </div>
+    <!-- /.col -->
+      </div>
+  <!-- /.row -->
+    </div>
+  </div>
+
+  <!-- Main row -->
+
+  <!-- /.row -->
+</section>

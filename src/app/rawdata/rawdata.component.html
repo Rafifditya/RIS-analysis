@@ -1,0 +1,56 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Visit Data
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">Visit data</li>
+  </ol>
+</section>
+<section class="content">
+  <!-- Info boxes -->
+
+  <!-- /.row -->
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Real Data Terfilter</h3>
+
+          <div class="box-body">
+            <div class="table-responsive">
+              <table id="data1" class="table no-margin">
+                <thead>
+                <tr>
+                  <th>Tanggal</th>
+                  <th>Data yang masuk</th>
+                  <th>Data yang terfilter</th>
+                </tr>
+                </thead>
+                  <!-- table body-->
+                  <tbody>
+                    <tr *ngFor="let data of pcapdatalist">
+                      <td>{{data.date}}</td>
+                      <td>{{data.totaldata}}</td>
+                      <td>{{data.filtereddata}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+          <button class="btn btn-primary"> forecast </button>
+          </div>
+      <!-- /.box -->
+      </div>
+    <!-- /.col -->
+    </div>
+  <!-- /.row -->
+  </div>
+
+
+  <!-- Main row -->
+
+  <!-- /.row -->
+</section>
